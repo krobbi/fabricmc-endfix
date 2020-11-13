@@ -68,7 +68,7 @@ Software, and to permit persons to whom the Software is furnished to do so,
 subject to the following conditions:
 
 The Software may not be published or distributed in a standalone format without
-mofification or inclusion in other works, except by the authors or copyright
+modification or inclusion in other works, except by the authors or copyright
 holders of the Software.
 
 The Software, or any work containing the Software or any of its parts must not
