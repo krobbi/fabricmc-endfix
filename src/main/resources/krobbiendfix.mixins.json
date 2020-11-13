@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.krobbi.fabricmc.endfix.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "server.MixinEnderDragonFight",
+    "server.MixinEndSpikeFeature"
+  ],
+  "client": [
+    "client.MixinEndPortalBlockEntity"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
