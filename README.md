@@ -26,7 +26,7 @@ singleplayer internal server) restarts, or if the world seed changes.
 * Endfix fixes some minor, mostly visual issues with several End-related
 structures.
 * You are free to use Endfix in mod packs without permission.
-* Enfix or any of its parts may not be used commercially in any software
+* Endfix or any of its parts may not be used commercially in any software
 packages.
 * There are currently no plans to make a Forge version of Endfix.
 * Endfix will not be developed for snapshot versions of Minecraft.
