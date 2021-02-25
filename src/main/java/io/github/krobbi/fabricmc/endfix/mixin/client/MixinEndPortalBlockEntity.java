@@ -2,9 +2,9 @@ package io.github.krobbi.fabricmc.endfix.mixin.client;
 
 // Mixin annotations:
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
+import org.spongepowered.asm.mixin.Overwrite;
 
 // Utils:
 import net.minecraft.util.math.Direction;
@@ -12,15 +12,15 @@ import net.minecraft.util.math.Direction;
 // Classes:
 import net.minecraft.block.entity.EndPortalBlockEntity;
 
-@Mixin(EndPortalBlockEntity.class)
+@Mixin(EndPortalBlockEntity.class) @Environment(EnvType.CLIENT)
 public class MixinEndPortalBlockEntity {
 
     /**
-     * @reason Fix end portals only being visible from above.
+     * @reason Make End portals visible from all sides.
      * @author Krobbizoid
      */
     @Overwrite @Environment(EnvType.CLIENT)
     public boolean shouldDrawSide(Direction direction){
-        return direction == Direction.UP || direction == Direction.DOWN;
+        return true;
     }
 }

@@ -8,7 +8,8 @@
     "server.MixinEndSpikeFeature"
   ],
   "client": [
-    "client.MixinEndPortalBlockEntity"
+    "client.MixinEndPortalBlockEntity",
+    "client.MixinEndPortalBlockEntityRenderer"
   ],
   "injectors": {
     "defaultRequire": 1

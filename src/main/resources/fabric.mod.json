@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "krobbiendfix",
+  "id": "krobbi_endfix",
   "version": "${version}",
   "name": "Endfix",
-  "description": "Fixes the generation of end spikes and end gateways.",
+  "description": "Fixes the generation of End spikes and gateways.",
   "authors": [
     "Krobbizoid"
   ],
@@ -13,12 +13,12 @@
     "sources": "https://github.com/krobbi/fabricmc-endfix",
     "issues": "https://github.com/krobbi/fabricmc-endfix/issues"
   },
-  "license": "https://krobbi.github.io/license/mnc-mit-2020.txt",
-  "icon": "assets/krobbiendfix/icon.png",
+  "license": "https://krobbi.github.io/license/mnc-mit-2020-2021.txt",
+  "icon": "assets/krobbi_endfix/icon.png",
   "environment": "*",
   "entrypoints": {},
   "mixins": [
-    "krobbiendfix.mixins.json"
+    "krobbi_endfix.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.7.4",

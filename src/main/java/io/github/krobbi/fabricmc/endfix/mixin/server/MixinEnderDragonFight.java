@@ -23,19 +23,19 @@ public class MixinEnderDragonFight {
     @Shadow
     private void generateEndGateway(BlockPos blockPos){}
 
-    private static final int GATEWAY_COUNT  = 20;
-    private static final int GATEWAY_RADIUS = 96;
-    private static final int GATEWAY_HEIGHT = 75;
+    private static final int GATEWAY_COUNT = 20;
+    private static final int GATEWAY_RING_HEIGHT = 75;
+    private static final int GATEWAY_RING_RADIUS = 96;
 
     /**
-     * @reason Fix the end gateway generation.
+     * @reason Fix the End gateway generation.
      * @author Krobbizoid
      */
     @Overwrite
     private void generateNewEndGateway(){
         if(!this.gateways.isEmpty()){
             int gatewayID = (int) this.gateways.remove(this.gateways.size() - 1);
-            generateEndGateway(EndfixUtil.getOriginRingPos(GATEWAY_COUNT, gatewayID, GATEWAY_RADIUS, GATEWAY_HEIGHT));
+            generateEndGateway(EndfixUtil.getOriginRingPos(GATEWAY_COUNT, gatewayID, GATEWAY_RING_RADIUS, GATEWAY_RING_HEIGHT));
         }
     }
 }

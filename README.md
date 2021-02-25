@@ -1,5 +1,5 @@
 # Endfix
-__v1.1.1__ for Minecraft Fabric __1.16.x__  
+__v1.1.2__ for Minecraft Fabric __1.16.x__  
 A Minecraft Fabric mod to fix a bug where End spikes (pillars) and gateways
 would generate asymmetrically since version 1.14. Endfix also makes End portals
 visible from below when installed on the client.  
@@ -9,7 +9,7 @@ i.e: A fix for [MC-151399](https://bugs.mojang.com/browse/MC-151399) and
 The mod can be downloaded from the
 [releases page](https://github.com/krobbi/fabricmc-endfix/releases).
 
-Confirmed working in ```Minecraft 1.16.5```
+v1.1.2 is confirmed working in ```Minecraft 1.16.5```
 with ```Fabric Loader 0.11.2-1.16.5```
 and ```Fabric API 0.31.0+1.16```.
 
@@ -22,6 +22,8 @@ It is recommended to keep Endfix installed as the positions of the End spikes
 are cached. This cache is not saved to disk and is lost when the server (or
 singleplayer internal server) restarts, or if the world seed changes.
 
+NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG.
+
 # Summary
 * Endfix fixes some minor, mostly visual issues with several End-related
 structures.
@@ -30,19 +32,21 @@ structures.
 packages.
 * There are currently no plans to make a Forge version of Endfix.
 * Endfix will not be developed for snapshot versions of Minecraft.
-* The Fabric mod ID for Endfix is ```krobbiendfix```.
+* The Fabric mod ID for Endfix is ```krobbi_endfix```.
 
-NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG.
+# Credits
+Logo color palette: [Faraway48](https://lospec.com/palette-list/faraway48) by
+[Igor Ferreira](https://twitter.com/diemorth).
 
 # License
 In an effort to better comply with Mojang's terms of service, Endfix has been
 released under a modified non-commercial MIT-like license:  
-https://krobbi.github.io/license/mnc-mit-2020.txt
+https://krobbi.github.io/license/mnc-mit-2020-2021.txt
 
 ---
 Modified non-commercial MIT License
 
-Copyright (c) 2020 Chris Roberts
+Copyright (c) 2020-2021 Chris Roberts
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

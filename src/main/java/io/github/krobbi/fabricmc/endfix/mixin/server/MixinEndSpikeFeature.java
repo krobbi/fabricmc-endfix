@@ -21,15 +21,15 @@ import net.minecraft.world.StructureWorldAccess;
 @Mixin(EndSpikeFeature.class)
 class MixinEndSpikeFeature {
 
-    private static final int SPIKE_COUNT       = 10;
+    private static final int SPIKE_COUNT = 10;
     private static final int SPIKE_HEIGHT_BASE = 76;
     private static final int SPIKE_HEIGHT_STEP = 3;
     private static final int SPIKE_RADIUS_BASE = 2;
     private static final int SPIKE_RADIUS_STEP = 3;
     private static final int SPIKE_RING_RADIUS = 42;
 
-    private static final List<EndSpikeFeature.Spike> SPIKES    = Lists.newArrayList();
-    private static long                              cacheSeed = 65536L; // Inaccessible spike seed, uncached.
+    private static final List<EndSpikeFeature.Spike> SPIKES = Lists.newArrayList();
+    private static long cachedSeed = 65536L; // Inaccessible spike seed, forces cache to occur.
 
     private static void cacheSpikes(Long seed){
         SPIKES.clear();
@@ -38,16 +38,15 @@ class MixinEndSpikeFeature {
         Collections.shuffle(spikeIDs, new Random(seed));
 
         for(int i = 0; i < SPIKE_COUNT; i++){
-            int     id      = (int) spikeIDs.get(i);
-            int     radius  = SPIKE_RADIUS_BASE + id / SPIKE_RADIUS_STEP;
-            int     height  = SPIKE_HEIGHT_BASE + id * SPIKE_HEIGHT_STEP;
+            int id = (int) spikeIDs.get(i);
+            int radius = SPIKE_RADIUS_BASE + id / SPIKE_RADIUS_STEP;
+            int height = SPIKE_HEIGHT_BASE + id * SPIKE_HEIGHT_STEP;
             boolean guarded = id == 1 || id == 2;
-
             BlockPos pos = EndfixUtil.getOriginRingPos(SPIKE_COUNT, i, SPIKE_RING_RADIUS, height);
             SPIKES.add(new EndSpikeFeature.Spike(pos.getX(), pos.getZ(), radius, pos.getY(), guarded));
         }
 
-        cacheSeed = seed;
+        cachedSeed = seed;
     }
 
     /**
@@ -57,7 +56,8 @@ class MixinEndSpikeFeature {
     @Overwrite
     public static List<EndSpikeFeature.Spike> getSpikes(StructureWorldAccess world){
         long spikeSeed = new Random(world.getSeed()).nextLong() & 65535L;
-        if(spikeSeed != cacheSeed){
+
+        if(spikeSeed != cachedSeed){
             cacheSpikes(spikeSeed);
         }
 
