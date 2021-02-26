@@ -19,7 +19,7 @@ public class MixinEndPortalBlockEntity {
      * @reason Make End portals visible from all sides.
      * @author Krobbizoid
      */
-    @Overwrite @Environment(EnvType.CLIENT)
+    @Overwrite
     public boolean shouldDrawSide(Direction direction){
         return true;
     }

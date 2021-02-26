@@ -1,5 +1,5 @@
 # Endfix
-__v1.1.2__ for Minecraft Fabric __1.16.x__  
+__v1.1.3__ for Minecraft Fabric __1.16.x__  
 A Minecraft Fabric mod to fix a bug where End spikes (pillars) and gateways
 would generate asymmetrically since version 1.14. Endfix also makes End portals
 visible from below when installed on the client.  
@@ -9,7 +9,7 @@ i.e: A fix for [MC-151399](https://bugs.mojang.com/browse/MC-151399) and
 The mod can be downloaded from the
 [releases page](https://github.com/krobbi/fabricmc-endfix/releases).
 
-v1.1.2 is confirmed working in ```Minecraft 1.16.5```
+v1.1.3 is confirmed working in ```Minecraft 1.16.5```
 with ```Fabric Loader 0.11.2-1.16.5```
 and ```Fabric API 0.31.0+1.16```.
 
