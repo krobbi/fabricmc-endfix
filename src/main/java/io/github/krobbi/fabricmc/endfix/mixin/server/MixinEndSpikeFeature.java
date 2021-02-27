@@ -37,6 +37,7 @@ public class MixinEndSpikeFeature {
      * @author Krobbizoid
      */
     static class SpikeCache extends CacheLoader<Long, List<EndSpikeFeature.Spike>> {
+
         private SpikeCache(){}
 
         private static final int SPIKE_COUNT = 10;
