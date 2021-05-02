@@ -41,7 +41,7 @@ Logo color palette: [Faraway48](https://lospec.com/palette-list/faraway48) by
 # License
 In an effort to better comply with Mojang's terms of service, Endfix has been
 released under a modified non-commercial MIT-like license:  
-https://krobbi.github.io/license/mnc-mit-2020-2021.txt
+https://krobbi.github.io/license/2020/2021/mnc-mit.txt
 
 ---
 Modified non-commercial MIT License

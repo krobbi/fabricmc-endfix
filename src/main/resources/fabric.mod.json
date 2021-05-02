@@ -13,7 +13,7 @@
     "sources": "https://github.com/krobbi/fabricmc-endfix",
     "issues": "https://github.com/krobbi/fabricmc-endfix/issues"
   },
-  "license": "https://krobbi.github.io/license/mnc-mit-2020-2021.txt",
+  "license": "https://krobbi.github.io/license/2020/2021/mnc-mit.txt",
   "icon": "assets/krobbi_endfix/icon.png",
   "environment": "*",
   "entrypoints": {},
