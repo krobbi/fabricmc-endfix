@@ -1,0 +1,4 @@
+accessWidener v1 named
+
+# Access End spike placement code:
+accessible class net/minecraft/world/gen/feature/EndSpikeFeature$SpikeCache

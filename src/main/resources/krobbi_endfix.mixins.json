@@ -1,17 +1,17 @@
 {
-  "required": true,
-  "minVersion": "0.8",
-  "package": "io.github.krobbi.fabricmc.endfix.mixin",
-  "compatibilityLevel": "JAVA_8",
-  "mixins": [
-    "server.MixinEnderDragonFight",
-    "server.MixinEndSpikeFeature"
-  ],
-  "client": [
-    "client.MixinEndPortalBlockEntity",
-    "client.MixinEndPortalBlockEntityRenderer"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+	"required": true,
+	"minVersion": "0.8",
+	"package": "io.github.krobbi.fabricmc.endfix.mixin",
+	"compatibilityLevel": "JAVA_16",
+	"mixins": [
+		"server.MixinEnderDragonFight",
+		"server.MixinSpikeCache"
+	],
+	"client": [
+		"client.MixinEndPortalBlockEntity",
+		"client.MixinEndPortalBlockEntityRenderer"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
 }

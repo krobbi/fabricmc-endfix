@@ -1,26 +1,13 @@
-Modified non-commercial MIT License
+MIT License
 
-Copyright (c) 2020-2021 Chris Roberts
+Copyright (c) 2021 Chris Roberts
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
-in the Software non-commercially, including without limitation the rights to
-use, copy, modify, merge, publish, distribute and/or sublicense copies of the
-Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The Software may not be published or distributed in a standalone format without
-modification or inclusion in other works, except by the authors or copyright
-holders of the Software.
-
-The Software, or any work containing the Software or any of its parts must not
-be sublicensed or sold commercially, or otherwise distributed in a manner where
-persons obtaining the Software may pay for it using currency with real-world
-value.
-
-License text for copies of the Software may not be replaced with the text of the
-original MIT License. The Software may not be described as being licensed under
-the MIT License without mentioning that the license has been modified.
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.

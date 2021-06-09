@@ -1,41 +1,40 @@
 package io.github.krobbi.fabricmc.endfix.mixin.server;
 
-// Mixin annotations:
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Overwrite;
-
-// Utils:
-import java.util.List;
-import net.minecraft.util.math.BlockPos;
-import io.github.krobbi.fabricmc.endfix.EndfixUtil;
-
-// Classes:
+import io.github.krobbi.fabricmc.endfix.util.EndfixUtil;
 import net.minecraft.entity.boss.dragon.EnderDragonFight;
+import net.minecraft.util.math.BlockPos;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Shadow;
 
+import java.util.List;
+
+/**
+ * Server-side mixin for the Ender dragon fight to generate End gateways at the
+ * correct positions.
+ * @author Chris Roberts (Krobbizoid)
+ */
 @Mixin(EnderDragonFight.class)
 public class MixinEnderDragonFight {
 
-    @Shadow @Final
-    private List<Integer> gateways;
+	@Shadow @Final private List<Integer> gateways;
 
-    @Shadow
-    private void generateEndGateway(BlockPos blockPos){}
+	@Shadow private void generateEndGateway(BlockPos pos){}
 
-    /**
-     * @reason Make End gateway generation symmetrical.
-     * @author Krobbizoid
-     */
-    @Overwrite
-    private void generateNewEndGateway(){
-        final int GATEWAY_COUNT = 20;
-        final int GATEWAY_RING_RADIUS = 96;
-        final int GATEWAY_RING_HEIGHT = 75;
-
-        if(!this.gateways.isEmpty()){
-            int index = this.gateways.remove(this.gateways.size() - 1);
-            generateEndGateway(EndfixUtil.getRingPos(GATEWAY_COUNT, index, GATEWAY_RING_RADIUS, GATEWAY_RING_HEIGHT));
-        }
-    }
+	/**
+	 * Generates a new End gateway after an Ender dragon fight by from popping
+	 * an index from a shuffled list. If the list is not empty, a new End
+	 * gateway will be generated. The mod overwrites this method to generate
+	 * End spikes in the correct locations by using the ring position utility.
+	 * @author Chris Roberts (Krobbizoid)
+	 */
+	@Overwrite
+	private void generateNewEndGateway(){
+		if(!gateways.isEmpty()){
+			int index = gateways.remove(gateways.size() - 1);
+			BlockPos pos = EndfixUtil.getRingPos(20, 96, 75, index);
+			generateEndGateway(pos);
+		}
+	}
 }

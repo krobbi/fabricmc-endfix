@@ -1,31 +1,33 @@
 {
-  "schemaVersion": 1,
-  "id": "krobbi_endfix",
-  "version": "${version}",
-  "name": "Endfix",
-  "description": "Fixes the generation of End spikes and gateways.",
-  "authors": [
-    "Krobbizoid"
-  ],
-  "contact": {
-    "email": "Krobbizoid@gmail.com",
-    "homepage": "https://github.com/krobbi/fabricmc-endfix/releases",
-    "sources": "https://github.com/krobbi/fabricmc-endfix",
-    "issues": "https://github.com/krobbi/fabricmc-endfix/issues"
-  },
-  "license": "https://krobbi.github.io/license/2020/2021/mnc-mit.txt",
-  "icon": "assets/krobbi_endfix/icon.png",
-  "environment": "*",
-  "entrypoints": {},
-  "mixins": [
-    "krobbi_endfix.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.7.4",
-    "fabric": "*",
-    "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "flamingo": "*"
-  }
+	"schemaVersion": 1,
+	"id": "krobbi_endfix",
+	"version": "${version}",
+	"name": "Endfix",
+	"description": "Fixes the generation of End spikes and gateways, and makes End portals visible from the side.",
+	"authors": [
+		"Krobbizoid"
+	],
+	"contact": {
+		"email": "Krobbizoid@gmail.com",
+		"homepage": "https://github.com/krobbi/fabricmc-endfix/releases",
+		"sources": "https://github.com/krobbi/fabricmc-endfix",
+		"issues": "https://github.com/krobbi/fabricmc-endfix/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/krobbi_endfix/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": []
+	},
+	"accessWidener": "krobbi_endfix.accesswidener",
+	"mixins": [
+		"krobbi_endfix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.11.3",
+		"fabric": "*",
+		"minecraft": "1.17.x",
+		"java": ">=16"
+	},
+	"suggests": {}
 }

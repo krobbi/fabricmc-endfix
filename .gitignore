@@ -25,3 +25,6 @@ classes/
 out/
 remappedSrc/
 run/
+
+# Ignore
+notes/
