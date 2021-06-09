@@ -1,6 +1,6 @@
 # Endfix
 __v2.0.0__ for Minecraft Fabric __1.17.x__  
-__MIT License__ - https://krobbi.github.io/license/2021/mit.txt
+__MIT License__ - https://krobbi.github.io/license/2021/mit.txt  
 __Copyright &copy; 2020 Chris Roberts__ (Krobbizoid)
 
 # Contents
