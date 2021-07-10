@@ -19,9 +19,9 @@ The mod also makes End portals visible from the side for visual enhancement in
 creative mode building, or technical usages involving the removal of End portal
 frames.
 
-v2.0.0 is confirmed working in `Minecraft 1.17`
-with `Fabric Loader 0.11.3-1.17`
-and `Fabric API 0.34.9+1.17`.
+v2.0.0 is confirmed working in `Minecraft 1.17.1`
+with `Fabric Loader 0.11.6-1.17.1`
+and `Fabric API 0.36.1+1.17`.
 
 The mod will only have an effect when End spikes and gateways are generated. It
 will not fix existing end gateways, but it will move End spikes that are
